@@ -48,6 +48,7 @@ class Anagram(callbacks.Privmsg):
         query = urlencode( { \
             "source_text"                  : phrase, 
             "seen"                         : "true",
+            "vulgar"                       : "1",
             "submitbutton"                 : "Generate Anagrams" } )
 
         url = urlopen( "http://www.anagramgenius.com/server.php?" + query )
